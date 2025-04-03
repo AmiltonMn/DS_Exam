@@ -58,8 +58,6 @@ class OrderService {
     ) {
         var order = await Order.findById(id)
 
-        console.log(order)
-
         if (order === null) {
             return 0
         }
