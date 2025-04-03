@@ -8,12 +8,6 @@ class ProdctController {
         try {
             let data = await ProductService.CreateProduct(name, price, stock);
 
-            if (data === null) {
-                res.status(422).json({
-                    message: 'Please provide all required fields'
-                })
-            }
-
             res.status(200).json({
                 message: 'Product created successfully',
                 product: data
@@ -30,7 +24,7 @@ class ProdctController {
             let data = await ProductService.GetProducts();
 
             if (data === null) {
-                res.status(422).json({
+                res.status(404).json({
                     message: 'No products found'
                 })
             }

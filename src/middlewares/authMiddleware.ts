@@ -35,3 +35,15 @@ export const validateProduct = (req: Request, res: Response, next: NextFunction)
 
     next();
 }
+
+export const validateOrder = (req: Request, res: Response, next: NextFunction) => {
+    const { clientID, products, status } = req.body;
+
+    if (!clientID || !products || !status) {
+        res.status(422).json({
+            message: 'Please provide all required fields'
+        });
+    }
+
+    next();
+}
