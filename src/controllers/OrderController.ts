@@ -72,7 +72,7 @@ class OrderController {
                 })
             } else {
                 res.status(200).json({
-                    message: "Order successfully deleted"
+                    message: "Order successfully canceled"
                 })
             }
 

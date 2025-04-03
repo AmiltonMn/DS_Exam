@@ -1,6 +1,6 @@
 import express from 'express';
 import ProductController from '../controllers/ProductController';
-import { validateProduct } from '../middlewares/AuthMiddleware';
+import { validateProduct } from '../middlewares/authMiddleware.ts';
 
 const router = express.Router();
 
